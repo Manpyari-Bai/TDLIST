@@ -34,12 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const editButton = document.createElement('button');
         editButton.textContent = 'Edit';
+        editButton.className = 'edit-button';
         editButton.addEventListener('click', function() {
             editTask(li, span, taskText);
         });
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
+        deleteButton.className = 'delete-button';
         deleteButton.addEventListener('click', function() {
             li.remove();
             removeTaskFromLocalStorage(taskText);
@@ -61,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const saveButton = document.createElement('button');
         saveButton.textContent = 'Save';
+        saveButton.className = 'save-button';
         saveButton.addEventListener('click', function() {
             const newText = input.value.trim();
             if (newText !== '') {
